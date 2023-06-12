@@ -12,11 +12,9 @@ import java.util.List;
 @RequestMapping("/store/order")
 public class StoreController {
     private final CartService service;
-
     public StoreController(CartService service) {
         this.service = service;
     }
-
     @GetMapping("/add")
     public void add(@RequestParam("ID")List<Integer> ids) {
         service.add(ids);
